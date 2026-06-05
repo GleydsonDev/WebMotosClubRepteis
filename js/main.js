@@ -386,3 +386,27 @@ document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el))
 
   requestAnimationFrame(tick);
 })();
+
+// ───── BOTÃO VOLTAR AO TOPO ─────
+(function () {
+  const btnTopo = document.getElementById('btnTopo');
+  
+  if (!btnTopo) return;
+
+  // Mostra o botão quando o usuário rola 400px para baixo
+  function toggleBtnTopo() {
+    if (window.scrollY > 400) {
+      btnTopo.classList.add('visible');
+    } else {
+      btnTopo.classList.remove('visible');
+    }
+  }
+
+  // Rola para o topo com animação suave
+  btnTopo.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Escuta o evento de scroll
+  window.addEventListener('scroll', toggleBtnTopo);
+})();

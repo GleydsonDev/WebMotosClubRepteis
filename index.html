@@ -17,336 +17,334 @@
 </head>
 <body>
 
-<!-- ════════════ NAV ════════════ -->
-<nav>
-  <div class="nav-logo">
-    <img src="img/logo.png" alt="Logo Répteis MC">
-    <span class="nav-logo-txt">Répteis MC</span>
-  </div>
-  <ul class="nav-links">
-    <li><a href="#sobre">O Clube</a></li>
-    <li><a href="#presidente">Comando</a></li>
-    <li><a href="#membros">Membros</a></li>
-    <li><a href="#rotas">Rotas</a></li>
-    <li><a href="#sede">Sede</a></li>
-    <li><a href="#contato">Contato</a></li>
-  </ul>
-  <a href="#contato" class="nav-btn">Fale Conosco</a>
-  <button class="nav-hamburger" aria-label="Menu" id="navHamburger">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-
-<!-- ════════════ HERO ════════════ -->
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-scales-bg"></div>
-
-  <div class="hero-left">
-    <div class="hero-eyebrow">Fundado em 18 de Maio de 2025</div>
-    <h1 class="hero-title">RÉP<br><span class="gold">TEIS</span></h1>
-    <div class="hero-sub">MOTO &nbsp; CLUBE</div>
-    <div class="hero-slogans">
-      <div class="hero-slogan"><span>"Os Répteis estão em todos os lugares!"</span></div>
-      <div class="hero-slogan"><span>"Casca grossa até o fim!"</span></div>
+<!-- Cabeçalho e navegação principal -->
+<header>
+  <nav class="navbar">
+    <div class="nav-logo">
+      <img src="img/logo.png" alt="Logo do Répteis MC, com uma serpente" class="nav-logo-img">
+      <span class="nav-logo-txt">Répteis MC</span>
     </div>
-    <div class="hero-stats">
-      <div class="hero-stat"><div class="hero-stat-n">23</div><div class="hero-stat-l">Membros</div></div>
-      <div class="hero-stat"><div class="hero-stat-n">4+</div><div class="hero-stat-l">Destinos</div></div>
-      <div class="hero-stat"><div class="hero-stat-n">2.3k+</div><div class="hero-stat-l">Km Rodados</div></div>
+    <ul class="nav-links" aria-label="Menu principal">
+      <li><a href="#sobre">O Clube</a></li>
+      <li><a href="#presidente">Comando</a></li>
+      <li><a href="#membros">Membros</a></li>
+      <li><a href="#rotas">Rotas</a></li>
+      <li><a href="#sede">Sede</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a href="#contato" class="nav-btn">Fale Conosco</a>
+    <button class="nav-hamburger" aria-label="Abrir menu" id="navHamburger" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Seção Hero (apresentação inicial) -->
+<main>
+  <section id="hero" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-scales-bg"></div>
+
+    <div class="hero-left">
+      <div class="hero-eyebrow">Fundado em 18 de Maio de 2025</div>
+      <h1 class="hero-title">RÉP<br><span class="gold">TEIS</span></h1>
+      <div class="hero-sub">MOTO &nbsp; CLUBE</div>
+      <div class="hero-slogans">
+        <div class="hero-slogan"><span>"Os Répteis estão em todos os lugares!"</span></div>
+        <div class="hero-slogan"><span>"Casca grossa até o fim!"</span></div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-n">23</div><div class="hero-stat-l">Membros</div></div>
+        <div class="hero-stat"><div class="hero-stat-n">4+</div><div class="hero-stat-l">Destinos</div></div>
+        <div class="hero-stat"><div class="hero-stat-n">2.3k+</div><div class="hero-stat-l">Km Rodados</div></div>
+      </div>
+      <div class="hero-ctas">
+        <a href="#sobre" class="btn-primary">Conheça o Clube</a>
+        <a href="#contato" class="btn-secondary">Entre em Contato</a>
+      </div>
     </div>
-    <div class="hero-ctas">
-      <a href="#sobre" class="btn-primary">Conheça o Clube</a>
-      <a href="#contato" class="btn-secondary">Entre em Contato</a>
+
+    <div class="hero-right">
+      <img src="img/reptei-moto.png" alt="Ilustração de um reptilo em uma moto, logo do clube" class="hero-right-img" loading="lazy">
     </div>
-  </div>
+  </section>
 
-  <div class="hero-right">
-    <img src="img/reptei-moto.png" alt="Répteis MC">
-  </div>
-</section>
+  <!-- Barra de divisória com textura -->
+  <div class="scale-bar" aria-hidden="true"></div>
 
-<div class="scale-bar"></div>
-
-
-<!-- ════════════ SOBRE ════════════ -->
-<section id="sobre">
-  <div class="reveal">
-    <div class="sec-label">Quem Somos</div>
-    <h2 class="sec-title">Uma Irmandade<br><span style="color:var(--dourado)">Sobre Duas Rodas</span></h2>
-    <div class="sobre-body">
-      <p>Os Répteis MC são uma irmandade de motociclistas unida pela paixão pelas motos, pelo companheirismo e pela estrada.</p>
-      <p>Mais do que um grupo que anda junto, somos uma família formada por amizade, respeito, lealdade e participação em eventos, viagens e ações sociais.</p>
-      <p>Cada integrante representa o brasão com responsabilidade, fortalecendo a união entre os membros e a boa imagem do motociclismo.</p>
-    </div>
-  </div>
-  <div class="reveal" style="transition-delay:0.15s">
-    <img src="img/aniversario.png" alt="1° Aniversário Répteis MC" class="sobre-aniv-img">
-    <div class="sobre-quote">
-      <p>Em 18 de maio, seis motociclistas se dispersaram de um grupo maior e decidiram seguir um caminho próprio. O destino eram locais conhecidos por poucos — um antigo casarão abandonado, cercado por lendas de assombrações. O desafio foi aceito, e ao final daquela jornada nasceram os Répteis MC.</p>
-      <div class="sobre-quote-author">✦ A origem — 18.05.2025</div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-
-<!-- ════════════ PRESIDENTE ════════════ -->
-<section id="presidente">
-  <div class="reveal">
-    <div class="sec-label">Comando</div>
-    <h2 class="sec-title">O Presidente</h2>
-  </div>
-  <div class="presidente-inner">
+  <!-- Seção sobre o clube -->
+  <section id="sobre" class="sobre">
     <div class="reveal">
-      <div class="pres-photo-wrap">
-        <div class="pres-photo-frame">
-          <img src="img/membro_wagner.png" alt="Wagner Santos">
-        </div>
-        <div class="pres-badge">Presidente — Wagner Santos</div>
+      <div class="sec-label">Quem Somos</div>
+      <h2 class="sec-title">Uma Irmandade<br><span class="sec-title-gold">Sobre Duas Rodas</span></h2>
+      <div class="sobre-body">
+        <p>Os Répteis MC são uma irmandade de motociclistas unida pela paixão pelas motos, pelo companheirismo e pela estrada.</p>
+        <p>Mais do que um grupo que anda junto, somos uma família formada por amizade, respeito, lealdade e participação em eventos, viagens e ações sociais.</p>
+        <p>Cada integrante representa o brasão com responsabilidade, fortalecendo a união entre os membros e a boa imagem do motociclismo.</p>
       </div>
     </div>
     <div class="reveal" style="transition-delay:0.15s">
-      <div class="pres-cargo">⬡ Presidente Fundador</div>
-      <div class="pres-name">Wagner<br>Santos</div>
-      <p class="pres-body">Líder fundador dos Répteis MC, Wagner Santos esteve entre os seis motociclistas que, em 18 de maio de 2025, decidiram trilhar um caminho próprio e dar origem a esta irmandade. Sob sua liderança, o clube cresceu de 6 para 23 membros no primeiro ano.</p>
-      <div class="pres-facts">
-        <div class="pres-fact"><div class="pres-fact-icon"><i class="fas fa-trophy"></i></div><div><div class="pres-fact-label">Cargo</div><div class="pres-fact-val">Presidente Fundador</div></div></div>
-        <div class="pres-fact"><div class="pres-fact-icon"><i class="fas fa-calendar-alt"></i></div><div><div class="pres-fact-label">Fundação</div><div class="pres-fact-val">18 de Maio de 2025</div></div></div>
-        <div class="pres-fact"><div class="pres-fact-icon"><i class="fas fa-motorcycle"></i></div><div><div class="pres-fact-label">Estilo</div><div class="pres-fact-val">Naked</div></div></div>
-        <div class="pres-fact"><div class="pres-fact-icon"><i class="fas fa-map-marker-alt"></i></div><div><div class="pres-fact-label">Base</div><div class="pres-fact-val">São Gonçalo do Amarante, RN</div></div></div>
+      <img src="img/aniversario.png" alt="Foto do 1° aniversário do Répteis MC com todos os membros" class="sobre-aniv-img" loading="lazy">
+      <div class="sobre-quote">
+        <p>Em 18 de maio, seis motociclistas se dispersaram de um grupo maior e decidiram seguir um caminho próprio. O destino eram locais conhecidos por poucos — um antigo casarão abandonado, cercado por lendas de assombrações. O desafio foi aceito, e ao final daquela jornada nasceram os Répteis MC.</p>
+        <div class="sobre-quote-author">✦ A origem — 18.05.2025</div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<div class="scale-bar"></div>
+  <!-- Divisor visual -->
+  <div class="divider" aria-hidden="true"></div>
 
-
-<!-- ════════════ MEMBROS ════════════ -->
-<section id="membros">
-  <div class="reveal">
-    <div class="sec-label">Irmandade</div>
-    <h2 class="sec-title">Membros Principais</h2>
-  </div>
-  <div class="membros-grid reveal" style="transition-delay:0.1s">
-    <div class="membro-card">
-      <div class="membro-foto"><img src="img/membro_wagner_pres.png" alt="Wagner Santos"></div>
-      <div class="membro-info"><div class="membro-cargo">⬡ Presidente</div><div class="membro-nome">Wagner Santos</div></div>
+  <!-- Seção do presidente -->
+  <section id="presidente" class="presidente">
+    <div class="reveal">
+      <div class="sec-label">Comando</div>
+      <h2 class="sec-title">O Presidente</h2>
     </div>
-    <div class="membro-card">
-      <div class="membro-foto"><img src="img/membro_diego.png" alt="Diego Silva"></div>
-      <div class="membro-info"><div class="membro-cargo">⬡ Vice-Presidente</div><div class="membro-nome">Diego Silva</div></div>
-    </div>
-    <div class="membro-card">
-      <div class="membro-foto"><img src="img/membro_niendson.png" alt="Niendson Lira"></div>
-      <div class="membro-info"><div class="membro-cargo">⬡ Capitão de Estrada</div><div class="membro-nome">Niendson Lira</div></div>
-    </div>
-    <div class="membro-card">
-      <div class="membro-foto"><img src="img/membro_andre.png" alt="André Souza"></div>
-      <div class="membro-info"><div class="membro-cargo">⬡ Tesoureiro</div><div class="membro-nome">André Souza</div></div>
-    </div>
-  </div>
-
-  <div class="fundadores-wrap reveal" style="transition-delay:0.2s">
-    <div class="fundadores-label">Fundadores</div>
-    <div class="submembros-carousel">
-      <div class="submembros-track">
-        <div class="submembro-card">
-          <div class="submembro-foto"><img src="img/membro_jeanderson.png" alt="Jeanderson"></div>
-          <div class="submembro-nome">Jeanderson</div>
-          <div class="submembro-cargo">Fundador</div>
+    <div class="presidente-inner">
+      <div class="reveal">
+        <div class="pres-photo-wrap">
+          <div class="pres-photo-frame">
+            <img src="img/membro_wagner.png" alt="Foto de Wagner Santos, presidente fundador do Répteis MC" class="pres-photo-img" loading="lazy">
+          </div>
+          <div class="pres-badge">Presidente — Wagner Santos</div>
         </div>
-        <div class="submembro-card">
-          <div class="submembro-foto"><img src="img/membro_joao.png" alt="João Vitor"></div>
-          <div class="submembro-nome">João Vitor</div>
-          <div class="submembro-cargo">Fundador</div>
-        </div>
-        <div class="submembro-card">
-          <div class="submembro-foto"><img src="img/membro_ramon.png" alt="Ramon"></div>
-          <div class="submembro-nome">Ramon</div>
-          <div class="submembro-cargo">Fundador</div>
-        </div>
-        <div class="submembro-card">
-          <div class="submembro-foto"><img src="img/membro_jonathan.png" alt="Jonathan"></div>
-          <div class="submembro-nome">Jonathan</div>
-          <div class="submembro-cargo">Fundador</div>
-        </div>
-        <!-- Duplicate for infinite loop -->
-        <div class="submembro-card">
-          <div class="submembro-foto"><img src="img/membro_jeanderson.png" alt="Jeanderson"></div>
-          <div class="submembro-nome">Jeanderson</div>
-          <div class="submembro-cargo">Fundador</div>
-        </div>  
-        <div class="submembro-card">
-          <div class="submembro-foto"><img src="img/membro_joao.png" alt="João Vitor"></div>
-          <div class="submembro-nome">João Vitor</div>
-          <div class="submembro-cargo">Fundador</div>
-        </div>
-        <div class="submembro-card">
-          <div class="submembro-foto"><img src="img/membro_ramon.png" alt="Ramon"></div>
-          <div class="submembro-nome">Ramon</div>
-          <div class="submembro-cargo">Fundador</div>
-        </div>
-        <div class="submembro-card">
-          <div class="submembro-foto"><img src="img/membro_jonathan.png" alt="Jonathan"></div>
-          <div class="submembro-nome">Jonathan</div>
-          <div class="submembro-cargo">Fundador</div>
+      </div>
+      <div class="reveal" style="transition-delay:0.15s">
+        <div class="pres-cargo">⬡ Presidente Fundador</div>
+        <h3 class="pres-name">Wagner<br>Santos</h3>
+        <p class="pres-body">Líder fundador dos Répteis MC, Wagner Santos esteve entre os seis motociclistas que, em 18 de maio de 2025, decidiram trilhar um caminho próprio e dar origem a esta irmandade. Sob sua liderança, o clube cresceu de 6 para 23 membros no primeiro ano.</p>
+        <div class="pres-facts">
+          <div class="pres-fact"><div class="pres-fact-icon"><i class="fas fa-trophy" aria-hidden="true"></i></div><div><div class="pres-fact-label">Cargo</div><div class="pres-fact-val">Presidente Fundador</div></div></div>
+          <div class="pres-fact"><div class="pres-fact-icon"><i class="fas fa-calendar-alt" aria-hidden="true"></i></div><div><div class="pres-fact-label">Fundação</div><div class="pres-fact-val">18 de Maio de 2025</div></div></div>
+          <div class="pres-fact"><div class="pres-fact-icon"><i class="fas fa-motorcycle" aria-hidden="true"></i></div><div><div class="pres-fact-label">Estilo</div><div class="pres-fact-val">Naked</div></div></div>
+          <div class="pres-fact"><div class="pres-fact-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div><div><div class="pres-fact-label">Base</div><div class="pres-fact-val">São Gonçalo do Amarante, RN</div></div></div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<div class="divider"></div>
+  <!-- Barra de textura -->
+  <div class="scale-bar" aria-hidden="true"></div>
 
-
-<!-- ════════════ ROTAS — SCROLL STORYTELLING ════════════ -->
-<section id="rotas">
-  <div class="rotas-header reveal">
-    <div class="sec-label">A Estrada da Caatinga</div>
-    <h2 class="sec-title">Nossas Rotas</h2>
-  </div>
-
-  <div class="rotas-scene" id="rotasScene">
-    <!-- Estrada é desenhada pelo JS (curva S acompanhando o zig-zag) -->
-
-    <!-- Toca de saída (início) e entrada (fim) — desenhadas pelo JS sobre a estrada -->
-
-    <!-- Calango (visão de cima, na moto, apontando pra baixo) -->
-    <div class="rota-calango-wrap" id="calangoWrap">
-      <img src="img/calango.png" alt="Calango na moto" class="rota-calango-img" id="calangoImg">
+  <!-- Seção de membros -->
+  <section id="membros" class="membros">
+    <div class="reveal">
+      <div class="sec-label">Irmandade</div>
+      <h2 class="sec-title">Membros Principais</h2>
+    </div>
+    <div class="membros-grid reveal" style="transition-delay:0.1s">
+      <div class="membro-card">
+        <div class="membro-foto"><img src="img/membro_wagner_pres.png" alt="Foto de Wagner Santos, presidente do clube" loading="lazy"></div>
+        <div class="membro-info"><div class="membro-cargo">⬡ Presidente</div><div class="membro-nome">Wagner Santos</div></div>
+      </div>
+      <div class="membro-card">
+        <div class="membro-foto"><img src="img/membro_diego.png" alt="Foto de Diego Silva, vice-presidente do clube" loading="lazy"></div>
+        <div class="membro-info"><div class="membro-cargo">⬡ Vice-Presidente</div><div class="membro-nome">Diego Silva</div></div>
+      </div>
+      <div class="membro-card">
+        <div class="membro-foto"><img src="img/membro_niendson.png" alt="Foto de Niendson Lira, capitão de estrada do clube" loading="lazy"></div>
+        <div class="membro-info"><div class="membro-cargo">⬡ Capitão de Estrada</div><div class="membro-nome">Niendson Lira</div></div>
+      </div>
+      <div class="membro-card">
+        <div class="membro-foto"><img src="img/membro_andre.png" alt="Foto de André Souza, tesoureiro do clube" loading="lazy"></div>
+        <div class="membro-info"><div class="membro-cargo">⬡ Tesoureiro</div><div class="membro-nome">André Souza</div></div>
+      </div>
     </div>
 
-    <!-- Paradas -->
-    <div class="rotas-track" id="track">
-
-      <div class="rota-stop esq" data-stop="0">
-        <div class="rota-content">
-          <div class="rota-num">ROTA 01</div>
-          <div class="rota-nome">Castelo<br>Zé dos Montes</div>
-          <div class="rota-local">São Gonçalo do Amarante, RN</div>
-          <div class="rota-dados">15 membros · 113 km</div>
-          <img class="rota-img" src="img/local_castelo.jpeg" alt="Castelo Zé dos Montes" loading="lazy">
-          <div class="rota-cmt">"Pôr do sol incrível sobre as pedras — a primeira grande rota dos Répteis!"</div>
-        </div>
-        <div class="rota-dot"><div class="rota-marco"></div></div>
-        <div class="rota-vazio"></div>
-      </div>
-
-      <div class="rota-stop dir" data-stop="1">
-        <div class="rota-vazio"></div>
-        <div class="rota-dot"><div class="rota-marco"></div></div>
-        <div class="rota-content">
-          <div class="rota-num">ROTA 02</div>
-          <div class="rota-nome">Marco<br>Zero</div>
-          <div class="rota-local">Natal, RN</div>
-          <div class="rota-dados">10 membros · 84,5 km</div>
-          <img class="rota-img" src="img/local_marco_zero.jpeg" alt="Marco Zero" loading="lazy">
-          <div class="rota-cmt">"O ponto zero de Natal — puro orgulho de fazer parte dessa cidade."</div>
-        </div>
-      </div>
-
-      <div class="rota-stop esq" data-stop="2">
-        <div class="rota-content">
-          <div class="rota-num">ROTA 03</div>
-          <div class="rota-nome">Pedra<br>da Boca</div>
-          <div class="rota-local">Araruna, PB</div>
-          <div class="rota-dados">18 membros · 110 km</div>
-          <img class="rota-img" src="img/local_pedra_boca.jpeg" alt="Pedra da Boca" loading="lazy">
-          <div class="rota-cmt">"A maior rota até agora — 18 cascas grossas dominando a pedra!"</div>
-        </div>
-        <div class="rota-dot"><div class="rota-marco"></div></div>
-        <div class="rota-vazio"></div>
-      </div>
-
-      <div class="rota-stop dir" data-stop="3">
-        <div class="rota-vazio"></div>
-        <div class="rota-dot"><div class="rota-marco"></div></div>
-        <div class="rota-content">
-          <div class="rota-num">ROTA 04</div>
-          <div class="rota-nome">Praia<br>de Pipa</div>
-          <div class="rota-local">Tibau do Sul, RN</div>
-          <div class="rota-dados">Em breve</div>
-          <img class="rota-img" src="img/local_pipa.jpeg" alt="Pipa" loading="lazy">
-          <div class="rota-cmt">"O próximo destino. Os Répteis estão em todos os lugares!"</div>
+    <div class="fundadores-wrap reveal" style="transition-delay:0.2s">
+      <div class="fundadores-label">Fundadores</div>
+      <div class="submembros-carousel">
+        <div class="submembros-track">
+          <div class="submembro-card">
+            <div class="submembro-foto"><img src="img/membro_jeanderson.png" alt="Foto de Jeanderson, fundador do clube" loading="lazy"></div>
+            <div class="submembro-nome">Jeanderson</div>
+            <div class="submembro-cargo">Fundador</div>
+          </div>
+          <div class="submembro-card">
+            <div class="submembro-foto"><img src="img/membro_joao.png" alt="Foto de João Vitor, fundador do clube" loading="lazy"></div>
+            <div class="submembro-nome">João Vitor</div>
+            <div class="submembro-cargo">Fundador</div>
+          </div>
+          <div class="submembro-card">
+            <div class="submembro-foto"><img src="img/membro_ramon.png" alt="Foto de Ramon, fundador do clube" loading="lazy"></div>
+            <div class="submembro-nome">Ramon</div>
+            <div class="submembro-cargo">Fundador</div>
+          </div>
+          <div class="submembro-card">
+            <div class="submembro-foto"><img src="img/membro_jonathan.png" alt="Foto de Jonathan, fundador do clube" loading="lazy"></div>
+            <div class="submembro-nome">Jonathan</div>
+            <div class="submembro-cargo">Fundador</div>
+          </div>
+          <!-- Duplicatas para loop infinito -->
+          <div class="submembro-card">
+            <div class="submembro-foto"><img src="img/membro_jeanderson.png" alt="Foto de Jeanderson, fundador do clube" loading="lazy"></div>
+            <div class="submembro-nome">Jeanderson</div>
+            <div class="submembro-cargo">Fundador</div>
+          </div>  
+          <div class="submembro-card">
+            <div class="submembro-foto"><img src="img/membro_joao.png" alt="Foto de João Vitor, fundador do clube" loading="lazy"></div>
+            <div class="submembro-nome">João Vitor</div>
+            <div class="submembro-cargo">Fundador</div>
+          </div>
+          <div class="submembro-card">
+            <div class="submembro-foto"><img src="img/membro_ramon.png" alt="Foto de Ramon, fundador do clube" loading="lazy"></div>
+            <div class="submembro-nome">Ramon</div>
+            <div class="submembro-cargo">Fundador</div>
+          </div>
+          <div class="submembro-card">
+            <div class="submembro-foto"><img src="img/membro_jonathan.png" alt="Foto de Jonathan, fundador do clube" loading="lazy"></div>
+            <div class="submembro-nome">Jonathan</div>
+            <div class="submembro-cargo">Fundador</div>
+          </div>
         </div>
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<div class="scale-bar"></div>
+  <!-- Divisor -->
+  <div class="divider" aria-hidden="true"></div>
 
-
-<!-- ════════════ SEDE ════════════ -->
-<section id="sede">
-  <div class="reveal" style="position:relative">
-    <div class="sede-galeria">
-      <img src="img/sede.jpeg" alt="Sede Répteis MC" class="sede-foto-principal">
-      <img src="img/sede2.jpeg" alt="Sede Répteis MC" class="sede-foto-secundaria">
-      <div class="sede-badge2">Nossa Base</div>
+  <!-- Seção de rotas -->
+  <section id="rotas" class="rotas">
+    <div class="rotas-header reveal">
+      <div class="sec-label">A Estrada da Caatinga</div>
+      <h2 class="sec-title">Nossas Rotas</h2>
     </div>
-  </div>
-  <div class="reveal" style="transition-delay:0.15s">
-    <div class="sec-label">Ponto de Encontro</div>
-    <h2 class="sec-title">Nossa <span style="color:var(--dourado)">Sede</span></h2>
-    <div class="info-row"><div class="info-ic"><i class="fas fa-map-marker-alt"></i></div><div><div class="info-lbl">Endereço</div><div class="info-val">Rua Santa Maria, N° 7 — Olho D'água<br>São Gonçalo do Amarante, RN</div></div></div>
-    <div class="info-row"><div class="info-ic"><i class="fas fa-clock"></i></div><div><div class="info-lbl">Encontros</div><div class="info-val">Todo Domingo às 19h</div></div></div>
-    <div class="info-row"><div class="info-ic"><i class="fas fa-gas-pump"></i></div><div><div class="info-lbl">Referência</div><div class="info-val">Próximo ao Posto de Combustível</div></div></div>
-    <div class="info-row"><div class="info-ic"><i class="fas fa-handshake"></i></div><div><div class="info-lbl">Visitantes</div><div class="info-val">Motociclistas são sempre bem-vindos!</div></div></div>
-  </div>
-</section>
 
-<div class="divider"></div>
+    <div class="rotas-scene" id="rotasScene">
+      <!-- Calango na moto (scroll storytelling) -->
+      <div class="rota-calango-wrap" id="calangoWrap">
+        <img src="img/calango.png" alt="Calango ilustrativo na moto" class="rota-calango-img" id="calangoImg" aria-hidden="true">
+      </div>
 
+      <!-- Paradas das rotas -->
+      <div class="rotas-track" id="track">
 
-<!-- ════════════ CONTATO ════════════ -->
-<section id="contato">
-  <div class="reveal">
-    <div class="sec-label">Fale com a Gente</div>
-    <h2 class="sec-title">Contato</h2>
-  </div>
-  <div class="contato-grid">
-    <form onsubmit="return false" class="reveal">
-      <label class="form-lbl">Seu nome</label>
-      <input class="form-inp" type="text" id="contatoNome" placeholder="Como podemos te chamar?">
-      <label class="form-lbl">WhatsApp</label>
-      <input class="form-inp" type="tel" id="contatoZap" placeholder="(84) 00000-0000">
-      <label class="form-lbl">Mensagem</label>
-      <textarea class="form-ta" id="contatoMsg" placeholder="Quer fazer parte? Tem alguma dúvida? Fala com a gente!"></textarea>
-      <button class="form-submit" type="button" id="btnWhatsapp">Enviar pelo WhatsApp</button>
-    </form>
+        <article class="rota-stop esq" data-stop="0">
+          <div class="rota-content">
+            <div class="rota-num">ROTA 01</div>
+            <div class="rota-nome">Castelo<br>Zé dos Montes</div>
+            <div class="rota-local">São Gonçalo do Amarante, RN</div>
+            <div class="rota-dados">15 membros · 113 km</div>
+            <img class="rota-img" src="img/local_castelo.jpeg" alt="Foto do Castelo Zé dos Montes durante o passeio do clube" loading="lazy">
+            <div class="rota-cmt">"Pôr do sol incrível sobre as pedras — a primeira grande rota dos Répteis!"</div>
+          </div>
+          <div class="rota-dot"><div class="rota-marco" aria-hidden="true"></div></div>
+          <div class="rota-vazio" aria-hidden="true"></div>
+        </article>
+
+        <article class="rota-stop dir" data-stop="1">
+          <div class="rota-vazio" aria-hidden="true"></div>
+          <div class="rota-dot"><div class="rota-marco" aria-hidden="true"></div></div>
+          <div class="rota-content">
+            <div class="rota-num">ROTA 02</div>
+            <div class="rota-nome">Marco<br>Zero</div>
+            <div class="rota-local">Natal, RN</div>
+            <div class="rota-dados">10 membros · 84,5 km</div>
+            <img class="rota-img" src="img/local_marco_zero.jpeg" alt="Foto do Marco Zero de Natal com os membros do clube" loading="lazy">
+            <div class="rota-cmt">"O ponto zero de Natal — puro orgulho de fazer parte dessa cidade."</div>
+          </div>
+        </article>
+
+        <article class="rota-stop esq" data-stop="2">
+          <div class="rota-content">
+            <div class="rota-num">ROTA 03</div>
+            <div class="rota-nome">Pedra<br>da Boca</div>
+            <div class="rota-local">Araruna, PB</div>
+            <div class="rota-dados">18 membros · 110 km</div>
+            <img class="rota-img" src="img/local_pedra_boca.jpeg" alt="Foto da Pedra da Boca durante o passeio do clube" loading="lazy">
+            <div class="rota-cmt">"A maior rota até agora — 18 cascas grossas dominando a pedra!"</div>
+          </div>
+          <div class="rota-dot"><div class="rota-marco" aria-hidden="true"></div></div>
+          <div class="rota-vazio" aria-hidden="true"></div>
+        </article>
+
+        <article class="rota-stop dir" data-stop="3">
+          <div class="rota-vazio" aria-hidden="true"></div>
+          <div class="rota-dot"><div class="rota-marco" aria-hidden="true"></div></div>
+          <div class="rota-content">
+            <div class="rota-num">ROTA 04</div>
+            <div class="rota-nome">Praia<br>de Pipa</div>
+            <div class="rota-local">Tibau do Sul, RN</div>
+            <div class="rota-dados">Em breve</div>
+            <img class="rota-img" src="img/local_pipa.jpeg" alt="Vista da praia de Pipa, próxima rota do clube" loading="lazy">
+            <div class="rota-cmt">"O próximo destino. Os Répteis estão em todos os lugares!"</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Barra de textura -->
+  <div class="scale-bar" aria-hidden="true"></div>
+
+  <!-- Seção da sede -->
+  <section id="sede" class="sede">
+    <div class="reveal" style="position:relative">
+      <div class="sede-galeria">
+        <img src="img/sede.jpeg" alt="Foto principal da sede do Répteis MC" class="sede-foto-principal" loading="lazy">
+        <img src="img/sede2.jpeg" alt="Foto secundária da sede do clube" class="sede-foto-secundaria" loading="lazy">
+        <div class="sede-badge2">Nossa Base</div>
+      </div>
+    </div>
     <div class="reveal" style="transition-delay:0.15s">
-      <div class="social-titulo">Nos Siga</div>
-      <p class="social-txt">Acompanhe as rotas, encontros e novidades do clube. Os Répteis estão em todos os lugares!</p>
-      <a href="https://instagram.com/repteismc" class="social-item" target="_blank">
-        <span class="social-item-icon"><i class="fab fa-instagram"></i></span>
-        <span class="social-item-handle">@repteismc</span>
-        <span class="social-item-type">Instagram</span>
-      </a>
-      <a href="https://wa.me/558491976402" class="social-item" target="_blank">
-        <span class="social-item-icon"><i class="fab fa-whatsapp"></i></span>
-        <span class="social-item-handle">(84) 9197-6402</span>
-        <span class="social-item-type">WhatsApp</span>
-      </a>
-      <div class="social-item" style="opacity:0.35">
-        <span class="social-item-icon"><i class="fas fa-envelope"></i></span>
-        <span class="social-item-handle">E-mail em breve</span>
-        <span class="social-item-type">E-mail</span>
+      <div class="sec-label">Ponto de Encontro</div>
+      <h2 class="sec-title">Nossa <span class="sec-title-gold">Sede</span></h2>
+      <div class="info-row"><div class="info-ic"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div><div><div class="info-lbl">Endereço</div><div class="info-val">Rua Santa Maria, N° 7 — Olho D'água<br>São Gonçalo do Amarante, RN</div></div></div>
+      <div class="info-row"><div class="info-ic"><i class="fas fa-clock" aria-hidden="true"></i></div><div><div class="info-lbl">Encontros</div><div class="info-val">Todo Domingo às 19h</div></div></div>
+      <div class="info-row"><div class="info-ic"><i class="fas fa-gas-pump" aria-hidden="true"></i></div><div><div class="info-lbl">Referência</div><div class="info-val">Próximo ao Posto de Combustível</div></div></div>
+      <div class="info-row"><div class="info-ic"><i class="fas fa-handshake" aria-hidden="true"></i></div><div><div class="info-lbl">Visitantes</div><div class="info-val">Motociclistas são sempre bem-vindos!</div></div></div>
+    </div>
+  </section>
+
+  <!-- Divisor -->
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- Seção de contato -->
+  <section id="contato" class="contato">
+    <div class="reveal">
+      <div class="sec-label">Fale com a Gente</div>
+      <h2 class="sec-title">Contato</h2>
+    </div>
+    <div class="contato-grid">
+      <form class="contato-form reveal" onsubmit="return false;">
+        <label for="contatoNome" class="form-lbl">Seu nome</label>
+        <input class="form-inp" type="text" id="contatoNome" name="nome" placeholder="Como podemos te chamar?" required>
+        <label for="contatoZap" class="form-lbl">WhatsApp</label>
+        <input class="form-inp" type="tel" id="contatoZap" name="whatsapp" placeholder="(84) 00000-0000">
+        <label for="contatoMsg" class="form-lbl">Mensagem</label>
+        <textarea class="form-ta" id="contatoMsg" name="mensagem" placeholder="Quer fazer parte? Tem alguma dúvida? Fala com a gente!" required></textarea>
+        <button class="form-submit" type="button" id="btnWhatsapp">Enviar pelo WhatsApp</button>
+      </form>
+      <div class="contato-social reveal" style="transition-delay:0.15s">
+        <div class="social-titulo">Nos Siga</div>
+        <p class="social-txt">Acompanhe as rotas, encontros e novidades do clube. Os Répteis estão em todos os lugares!</p>
+        <a href="https://instagram.com/repteismc" class="social-item" target="_blank" aria-label="Ir para o Instagram do Répteis MC">
+          <span class="social-item-icon"><i class="fab fa-instagram" aria-hidden="true"></i></span>
+          <span class="social-item-handle">@repteismc</span>
+          <span class="social-item-type">Instagram</span>
+        </a>
+        <a href="https://wa.me/558491976402" class="social-item" target="_blank" aria-label="Abrir conversa no WhatsApp com o clube">
+          <span class="social-item-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></span>
+          <span class="social-item-handle">(84) 9197-6402</span>
+          <span class="social-item-type">WhatsApp</span>
+        </a>
+        <div class="social-item" style="opacity:0.35" aria-disabled="true">
+          <span class="social-item-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+          <span class="social-item-handle">E-mail em breve</span>
+          <span class="social-item-type">E-mail</span>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
-
-<!-- ════════════ FOOTER ════════════ -->
-<footer>
+<!-- Rodapé -->
+<footer class="footer">
   <div class="footer-logo">
-    <img src="img/logo.png" alt="Logo">
+    <img src="img/logo.png" alt="Logo do Répteis MC" class="footer-logo-img">
     <span class="footer-logo-txt">Répteis MC</span>
   </div>
   <div class="footer-motto">"Casca grossa até o fim!"</div>
@@ -358,6 +356,10 @@
   </div>
 </footer>
 
+<!-- Botão voltar ao topo -->
+<button id="btnTopo" class="btn-topo" aria-label="Voltar ao topo da página">
+  <i class="fas fa-arrow-up"></i>
+</button>
 
 <!-- JavaScript separado — carrega no final -->
 <script src="js/main.js"></script>

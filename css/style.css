@@ -23,7 +23,7 @@ body {
 }
 
 /* ───── NAV ───── */
-nav {
+header nav.navbar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
   height: 60px; display: flex; align-items: center;
   justify-content: space-between; padding: 0 6vw;
@@ -32,7 +32,7 @@ nav {
   backdrop-filter: blur(10px);
 }
 .nav-logo { display: flex; align-items: center; gap: 12px; }
-.nav-logo img {
+.nav-logo-img, .footer-logo-img {
   height: 42px; width: 42px; object-fit: cover;
   border-radius: 50%; border: none;
 }
@@ -199,6 +199,7 @@ h1.hero-title .gold { color: var(--dourado); }
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(36px, 5vw, 68px); letter-spacing: 3px; line-height: 1;
 }
+.sec-title-gold { color: var(--dourado); }
 .reveal {
   opacity: 0; transform: translateY(24px);
   transition: opacity 0.7s, transform 0.7s;
@@ -217,7 +218,7 @@ h1.hero-title .gold { color: var(--dourado); }
 .sobre-body p { margin-bottom: 14px; }
 .sobre-aniv-img {
   width: 100%; border-radius: 4px;
-  border: 1px solid rgba(200,168,75,0.15); display: block;
+  
 }
 .sobre-quote {
   background: var(--cinza); border-left: 3px solid var(--dourado);
@@ -796,6 +797,51 @@ footer {
 
   #contato { padding: 60px 5vw; }
   footer { flex-direction: column; text-align: center; padding: 24px 5vw; }
+}
+
+/* ───── BOTÃO VOLTAR AO TOPO ───── */
+.btn-topo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--dourado);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--preto);
+  font-size: 20px;
+  z-index: 150;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.btn-topo.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-topo:hover {
+  background: var(--dourado-claro);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+}
+
+/* Responsivo do botão voltar ao topo */
+@media (max-width: 768px) {
+  .btn-topo {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 480px) {
