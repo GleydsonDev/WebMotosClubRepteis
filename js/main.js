@@ -67,9 +67,9 @@ document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el))
 
 // ───── FORMULÁRIO DE CONTATO VIA WHATSAPP ─────
 // Monta uma mensagem com os dados digitados e abre o WhatsApp do clube.
-// Número do clube (presidente): +55 84 98624-6736
+// Número do clube (presidente): +55 84 9197-6402
 (function () {
-  const ZAP_CLUBE = '5584986246736'; // 55 (Brasil) + 84 (DDD) + número
+  const ZAP_CLUBE = '558491976402'; // 55 (Brasil) + 84 (DDD) + número
   const btn = document.getElementById('btnWhatsapp');
   if (!btn) return;
 
@@ -95,8 +95,8 @@ document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el))
 })();
 
 
-// ───── VEGETAÇÃO DA CAATINGA (cactos espalhados) ─────
-(function plantCacti() {
+// ───── VEGETAÇÃO E PAISAGEM DA CAATINGA ─────
+(function plantSertao() {
   const scene = document.getElementById('rotasScene');
   if (!scene) return;
 
@@ -117,24 +117,84 @@ document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el))
       <ellipse cx="37" cy="35" rx="6" ry="14" fill="${cor}"/>
     </svg>`;
 
-  // posições: {left%, top%, escala, tipo}  — espalhados pelas laterais
+  // pedra/rocha
+  const pedra = (cor) => `
+    <svg viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5,28 Q8,10 25,8 Q42,10 45,28 Z" fill="${cor}"/>
+    </svg>`;
+
+  // posições: {left%, top%, escala, tipo} — espalhados pelas laterais
   const C = '#1c2e13';
+  const corPedra = '#3a3022';
   const itens = [
     {l: 6,  t: 8,  s: 1.4, f: mandacaru}, {l: 90, t: 14, s: 1.1, f: mandacaru},
     {l: 4,  t: 30, s: 0.8, f: xique},     {l: 93, t: 34, s: 1.5, f: mandacaru},
     {l: 8,  t: 48, s: 1.7, f: mandacaru}, {l: 91, t: 54, s: 0.9, f: xique},
     {l: 3,  t: 68, s: 1.0, f: xique},     {l: 92, t: 72, s: 1.3, f: mandacaru},
     {l: 7,  t: 86, s: 1.5, f: mandacaru}, {l: 90, t: 90, s: 0.8, f: xique},
+    {l: 15, t: 22, s: 0.8, f: pedra},     {l: 85, t: 42, s: 1.0, f: pedra},
+    {l: 12, t: 58, s: 0.6, f: pedra},     {l: 88, t: 78, s: 0.9, f: pedra},
   ];
 
   itens.forEach((it) => {
     const div = document.createElement('div');
     div.style.cssText = `position:absolute; left:${it.l}%; top:${it.t}%;
-      width:${60*it.s}px; height:${120*it.s}px; z-index:0; opacity:0.55;
+      width:${60*it.s}px; height:${120*it.s}px; z-index:0; opacity:0.7;
       pointer-events:none; transform:translateX(-50%);`;
-    div.innerHTML = it.f(C);
+    div.innerHTML = it.f(it.f === pedra ? corPedra : C);
     scene.appendChild(div);
   });
+
+  // ── RIO E PONTE ──
+  function addRioPonte() {
+    // Rio
+    const rio = document.createElement('div');
+    rio.style.cssText = `
+      position:absolute; left:0; top:62%; width:100%; height:100px;
+      z-index:0; pointer-events:none;
+    `;
+    rio.innerHTML = `
+      <svg viewBox="0 0 1000 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:100%;">
+        <defs>
+          <linearGradient id="rioGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#3a7ca5;stop-opacity:0.8" />
+            <stop offset="50%" style="stop-color:#296a8b;stop-opacity:0.9" />
+            <stop offset="100%" style="stop-color:#1a4c63;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="1000" height="100" fill="url(#rioGrad)"/>
+        <path d="M0,30 Q200,20 400,35 Q600,50 800,30 Q1000,15 1000,30 L1000,70 Q800,85 600,65 Q400,50 200,70 Q0,85 0,70 Z" 
+              fill="rgba(255,255,255,0.12)" />
+      </svg>
+    `;
+    scene.appendChild(rio);
+
+    // Ponte
+    const ponte = document.createElement('div');
+    ponte.style.cssText = `
+      position:absolute; left:50%; top:calc(62% - 20px); 
+      transform:translateX(-50%); z-index:1; pointer-events:none;
+      width:200px; height:140px;
+    `;
+    ponte.innerHTML = `
+      <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+        <!-- Estrutura da ponte (madeira) -->
+        <rect x="20" y="50" width="160" height="20" fill="#5c4033"/>
+        <rect x="15" y="55" width="170" height="10" fill="#4a3328"/>
+        <!-- Pilastras -->
+        <rect x="25" y="70" width="12" height="50" fill="#3a2820"/>
+        <rect x="60" y="70" width="12" height="50" fill="#3a2820"/>
+        <rect x="128" y="70" width="12" height="50" fill="#3a2820"/>
+        <rect x="163" y="70" width="12" height="50" fill="#3a2820"/>
+        <!-- Bordas da estrada na ponte -->
+        <rect x="15" y="48" width="170" height="4" fill="#2e1d0c"/>
+        <rect x="15" y="68" width="170" height="4" fill="#2e1d0c"/>
+      </svg>
+    `;
+    scene.appendChild(ponte);
+  }
+
+  addRioPonte();
 })();
 
 
@@ -212,24 +272,42 @@ document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el))
     t.className = 'rota-tunel';
     t.style.top = topPct;
     t.innerHTML = `
-      <svg viewBox="0 0 140 90" xmlns="http://www.w3.org/2000/svg">
-        <!-- montanha/terra do túnel -->
-        <path d="M0,90 L0,50 Q70,-15 140,50 L140,90 Z" fill="#1a1409"/>
-        <path d="M0,90 L0,50 Q70,-15 140,50 L140,90 Z" fill="none"
-              stroke="rgba(200,168,75,0.25)" stroke-width="2"/>
-        <!-- boca escura do túnel -->
-        <ellipse cx="70" cy="78" rx="42" ry="34" fill="#000"/>
-        <ellipse cx="70" cy="78" rx="42" ry="34" fill="none"
-                 stroke="rgba(200,168,75,0.3)" stroke-width="2.5"/>
-        <ellipse cx="70" cy="82" rx="34" ry="26" fill="#0a0a08"/>
+      <svg viewBox="0 0 160 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Gradiente para a montanha/terra do túnel -->
+        <defs>
+          <linearGradient id="tunnelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#2e1d0c;stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#1a1409;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#0a0a08;stop-opacity:1" />
+          </linearGradient>
+          <radialGradient id="tunnelShadow" cx="50%" cy="80%" r="50%">
+            <stop offset="0%" style="stop-color:#000;stop-opacity:0.8" />
+            <stop offset="100%" style="stop-color:#000;stop-opacity:0" />
+          </radialGradient>
+        </defs>
+
+        <!-- Montanha/terra com gradiente -->
+        <path d="M0,100 L0,60 Q80,-20 160,60 L160,100 Z" fill="url(#tunnelGrad)"/>
+
+        <!-- Sombra suave na borda da montanha -->
+        <ellipse cx="80" cy="100" rx="80" ry="20" fill="url(#tunnelShadow)"/>
+
+        <!-- Borda dourada mais suave -->
+        <path d="M0,100 L0,60 Q80,-20 160,60 L160,100 Z" fill="none"
+              stroke="rgba(200,168,75,0.15)" stroke-width="1.5"/>
+
+        <!-- Boca do túnel com profundidade -->
+        <ellipse cx="80" cy="85" rx="48" ry="38" fill="#000"/>
+        <ellipse cx="80" cy="85" rx="48" ry="38" fill="none"
+                 stroke="rgba(200,168,75,0.2)" stroke-width="2"/>
+        
+        <!-- Interior mais escuro do túnel -->
+        <ellipse cx="80" cy="88" rx="40" ry="32" fill="#050505"/>
       </svg>`;
     scene.appendChild(t);
     return t;
   }
-  criaTunel('-2%');   // túnel de entrada (topo)
-  const tunelFim = criaTunel('96%');  // Adjusted tunnel end position
-  // o túnel do fim fica invertido (boca virada pra cima)
-  tunelFim.style.transform = 'translateX(-50%) scaleY(-1)';
+  criaTunel('-2%');   // apenas túnel de entrada (topo)
 
   // ── Controle de fumaça ──
   let ultimaFumaca = 0;
@@ -274,16 +352,13 @@ document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el))
     const zig = Math.sin(p * Math.PI * 3) * (rect.width * 0.038);
 
     // ── ENTRA/SAI DOS TÚNEIS ──
-    // Os túneis (z-index maior) cobrem o calango nas pontas, criando o efeito
-    // de sair de dentro do túnel e entrar no outro. Só um fade curtinho nas bordas.
     let opac = 1;
     if (p < 0.04) opac = p / 0.04;
-    else if (p > 0.96) opac = (1 - p) / 0.04;
     wrap.style.opacity = opac;
     wrap.style.transform = `translate(${zig}px, ${yPos}px)`;
 
     // ── FUMAÇA da moto (atrás dela = topo, pois é visão de cima) ──
-    if (p > 0.06 && p < 0.96) {
+    if (p > 0.06) {
       const cx = rect.width / 2 + zig;
       const cy = yPos - 10;
       soltaFumaca(cx, cy);
