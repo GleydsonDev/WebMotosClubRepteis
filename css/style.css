@@ -58,11 +58,27 @@ nav {
 /* hamburguer mobile */
 .nav-hamburger {
   display: none; background: none; border: none; cursor: pointer;
-  flex-direction: column; gap: 5px; padding: 4px;
+  flex-direction: column; gap: 5px; padding: 12px;
+  z-index: 201;
+  position: relative;
 }
+
 .nav-hamburger span {
-  display: block; width: 22px; height: 2px; background: var(--dourado);
+  display: block; width: 26px; height: 3px; background: var(--dourado);
   transition: all 0.3s;
+  border-radius: 2px;
+}
+
+.nav-hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.nav-hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* ───── HERO ───── */
@@ -718,6 +734,7 @@ footer {
   
   /* Mobile menu */
   .nav-links {
+    display: flex;
     position: fixed;
     top: 60px;
     left: 0;
@@ -727,11 +744,13 @@ footer {
     flex-direction: column;
     gap: 0;
     padding: 20px 0;
-    transform: translateY(-100%);
+    transform: translateY(-120%);
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
     z-index: 199;
     border-bottom: 1px solid rgba(200,168,75,0.12);
+    margin: 0;
+    list-style: none;
   }
   
   .nav-links.active {

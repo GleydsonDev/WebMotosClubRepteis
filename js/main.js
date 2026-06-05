@@ -7,28 +7,50 @@
 (function () {
   const hamburger = document.getElementById('navHamburger');
   const navLinks = document.querySelector('.nav-links');
-  const links = document.querySelectorAll('.nav-links a');
 
-  if (!hamburger || !navLinks) return;
+  console.log('Hamburger menu initializing...');
+  console.log('Hamburger element:', hamburger);
+  console.log('Nav links element:', navLinks);
 
-  // Toggle menu when hamburger is clicked
-  hamburger.addEventListener('click', () => {
+  if (!hamburger || !navLinks) {
+    console.log('Missing elements, aborting hamburger init');
+    return;
+  }
+
+  // Toggle function
+  function toggleMenu(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('Hamburger clicked! Toggling menu');
     navLinks.classList.toggle('active');
-  });
+    hamburger.classList.toggle('active');
+    console.log('navLinks has "active" class:', navLinks.classList.contains('active'));
+  }
+
+  // Toggle menu on click and touch
+  hamburger.addEventListener('click', toggleMenu);
+  hamburger.addEventListener('touchstart', toggleMenu, { passive: false });
 
   // Close menu when a link is clicked
-  links.forEach(link => {
-    link.addEventListener('click', () => {
+  navLinks.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+      console.log('Link clicked, closing menu');
       navLinks.classList.remove('active');
-    });
+    }
   });
 
   // Close menu when clicking outside
   document.addEventListener('click', (e) => {
     if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+      console.log('Clicking outside, closing menu');
       navLinks.classList.remove('active');
     }
   });
+  document.addEventListener('touchstart', (e) => {
+    if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+      navLinks.classList.remove('active');
+    }
+  }, { passive: true });
 })();
 
 // ───── SCROLL REVEAL ─────
